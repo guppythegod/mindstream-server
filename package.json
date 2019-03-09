@@ -18,6 +18,7 @@
   "homepage": "https://github.com/guppythegod/mindstream-server#readme",
   "dependencies": {
     "@slack/events-api": "^2.2.0",
-    "dotenv": "^6.2.0"
+    "dotenv": "^6.2.0",
+    "firebase-admin": "^7.0.0"
   }
 }
