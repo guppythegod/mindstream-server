@@ -8,7 +8,11 @@ const slackEvents = createEventAdapter(process.env.SLACK_TOKEN);
 const port = process.env.PORT || 8000;
 
 admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
+    credential: admin.credential.cert({
+        projectId: 'guppy-mindstream',
+        clientEmail: 'firebase-adminsdk-qwof7@guppy-mindstream.iam.gserviceaccount.com',
+        privateKey: process.env.FIREBASE_PRIVATE_KEY
+    }),
     databaseURL: 'https://guppy-mindstream.firebaseio.com'
 });
 
@@ -34,7 +38,6 @@ slackEvents.on('message', (event) => {
         }).catch(function(error) {
             console.error("Error writing document: ", error);
         });
-
     }
 });
 
