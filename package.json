@@ -1,0 +1,23 @@
+{
+  "name": "mindstream-server",
+  "version": "1.0.0",
+  "description": "The server that powers mind.guppy.im. This repo is in charge of communicating between Slack and Firebase.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guppythegod/mindstream-server.git"
+  },
+  "author": "Guppythegod",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/guppythegod/mindstream-server/issues"
+  },
+  "homepage": "https://github.com/guppythegod/mindstream-server#readme",
+  "dependencies": {
+    "@slack/events-api": "^2.2.0",
+    "dotenv": "^6.2.0"
+  }
+}
